@@ -7,7 +7,7 @@ import { useState } from 'react'
 import CircularProgress from '@mui/material/CircularProgress'
 
 
-const errorMessage = () => {
+const ErrorMessage = () => {
   return(
     <>
       <h1>There is some problem in server. Please visit after some time.</h1>
@@ -15,18 +15,36 @@ const errorMessage = () => {
   )
 }
 
-const Nodata = () => {
-  window.setTimeout(errorMessage, 3000)
-  return(
-    <>
-      <CircularProgress />
-    </>
-  )
-}
+
 
 function App() {
 
   const [Users, setUsers] = useState();
+  const [time, setTime] = useState(0)
+
+  const Nodata = () => {
+
+    let timeId = setInterval(() => {
+        setTime(time+1);
+    }, 1000);
+
+    if(time > 3 || Users)
+    {
+      clearInterval(timeId);
+    }
+    return(
+      <>
+      {
+        (time <= 3) ? <CircularProgress /> : <ErrorMessage />
+      }
+        
+      </>
+    )
+  }
+
+  console.log(time);
+
+
 
   useEffect(() => {
     axios.get('https://602e7c2c4410730017c50b9d.mockapi.io/users')
@@ -39,7 +57,6 @@ function App() {
       // console.log(err);
     })
   })
-
 
   return (
     <>
