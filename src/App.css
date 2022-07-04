@@ -1,0 +1,193 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh ;
+  width: 100vw;
+}
+
+.userList{
+  height: fit-content;
+  width: 90%;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_holder{
+  width: 48%;
+  /* border: 2px solid green; */
+  height: fit-content;
+}
+.detail_holder{
+  width: 48%;
+  height: 100%;
+  /* border: 2px solid black; */
+}
+
+.Heading_holder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #C5DFFF;
+  border-radius: 8px 8px 0px 0px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  height: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.list{
+  /* border: 2px solid black; */
+  height: 36rem;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.userCard{
+  width: 100%;
+  /* height: 13%; */
+  /* border: 2px solid black; */
+  background: #ECECEC;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+}
+
+.profileImage{ 
+  border-radius: 50%;
+  height: 3.1rem;
+  margin: 0.7rem;
+}
+
+.btn{
+  width: 100%;
+  border: none;
+  margin-bottom: 0.7rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.details{
+  min-height: 36rem;
+}
+
+.top{
+  /* height: 10rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+
+.top img{
+  width: 8rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.top p{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+
+  color: black;
+}
+
+.buttom{
+  width: 70%;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.text{
+  background: #DBDBDB;
+  border: 1px solid #6C6C6C;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+.text p{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+
+  color: #000000;
+}
+
+.about{
+  margin-bottom: 2rem;
+}
+
+.field{
+  margin-bottom: 1rem;
+}
+
+.details{
+  height: fit-content;
+}
+
+
+
+@media (max-width: 580px){
+
+  html{
+    font-size: 80%;
+  }
+  .wrapper{
+    min-height: 100vh ;
+  }
+
+
+  .userList{
+    /* height: 100vh; */
+    width: 100%;
+    padding: 2rem;
+    height: 100vh;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+    justify-content: start;
+    justify-content: space-between;
+    /* justify-content: space-between; */
+  }
+
+  .list_holder{
+    /* height: 45%; */
+    height: 21rem;
+  }
+  .detail_holder{
+    height: fit-content;
+  }
+  
+  .list{
+
+    overflow:initial;
+  }
+
+  .list_holder{
+    width: 100%;
+    height: fit-content;
+    overflow-y: scroll;
+    height: 50%;
+    /* padding-bottom: 3rem; */
+  }
+  .detail_holder{
+    width: 100%;
+    /* height: 100%; */
+  }
+}
